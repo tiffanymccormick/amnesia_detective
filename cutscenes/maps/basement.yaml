@@ -1,0 +1,18 @@
+name: "Basement Laboratory"
+size: [60, 20]
+player: { x: 3, y: 18 }
+walls:
+  - [0,0,59,0]
+  - [0,19,59,19]
+  - [0,0,0,19]
+  - [59,0,59,19]
+decor:
+  - glyph: '#'
+    positions: [[10,5],[11,5],[12,5],[13,5],[14,5],[15,5]]
+hotspots:
+  - id: "notebook"
+    x: 28; y: 10
+    on_enter:
+      - say: "HYDE: Ophelia’s notebook… correspondence…"
+      - say: "TIP: check your mail artifact when it arrives."
+      - next_scene: true

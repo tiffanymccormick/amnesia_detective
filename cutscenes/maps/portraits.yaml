@@ -1,0 +1,19 @@
+name: "Portrait Room"
+size: [60, 20]
+player: { x: 3, y: 18 }
+walls:
+  - [0,0,59,0]
+  - [0,19,59,19]
+  - [0,0,0,19]
+  - [59,0,59,19]
+decor:
+  - glyph: '#'
+    positions: [[8,4],[16,4],[24,4],[32,4],[40,4],[48,4]]
+hotspots:
+  - id: "odd_portrait"
+    x: 48; y: 4
+    on_enter:
+      - say: "HYDE: That portrait… it’s wrong."
+      - open_file: "~/CaseFiles/CrimeScene-Scan3.jpg"
+      - say: "TIP: exiftool CrimeScene-Scan3.jpg"
+      - next_scene: true
